@@ -8,8 +8,15 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 
+ 
+
+// middleware
+const corsOptions = {
+  origin: "https://chef-connect-client.onrender.com/", // frontend URI (ReactJS)
+}
+
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
