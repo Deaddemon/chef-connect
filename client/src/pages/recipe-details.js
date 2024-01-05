@@ -14,7 +14,7 @@ const RecipeDetails = () => {
     const fetchRecipeDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/${id}`
+          `https://chef-connect.onrender.com/recipes/${id}`
         );
         setRecipe(response.data);
       } catch (err) {

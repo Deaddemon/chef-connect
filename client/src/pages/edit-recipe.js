@@ -22,7 +22,7 @@ export const EditRecipe = () => {
         const fetchRecipe = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:3001/recipes/${id}`
+                    `https://chef-connect.onrender.com/recipes/${id}`
                 );
                 setRecipe(response.data);
             } catch (err) {
@@ -58,7 +58,7 @@ export const EditRecipe = () => {
 
 
             await axios.put(
-                `http://localhost:3001/recipes/edit/${id}`,
+                `https://chef-connect.onrender.com/recipes/edit/${id}`,
                 recipe
             );
 
